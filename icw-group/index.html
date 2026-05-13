@@ -169,11 +169,13 @@
   /* ---------- Job entries ---------- */
   .job {
     margin-top: 12px;
-    /* allow bullets to break across pages, but keep header stuck to first bullet */
-    orphans: 3;
-    widows: 3;
+    /* let bullets flow across pages naturally */
+    orphans: 2;
+    widows: 2;
   }
   .job:first-of-type { margin-top: 6px; }
+  /* Keep the header trio (title + org + type) atomic so it never splits,
+     but DO allow the first bullet to start on the next page if needed. */
   .job-head {
     display: flex;
     justify-content: space-between;
@@ -182,6 +184,8 @@
     margin-bottom: 1px;
     break-after: avoid;
     page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
   .job-title {
     font-size: 10.25pt;
@@ -203,6 +207,8 @@
     font-weight: 600;
     break-after: avoid;
     page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
   .job-org .org-link { color: var(--accent); text-decoration: none; }
   .job-org .org-link:hover { text-decoration: underline; }
@@ -218,9 +224,10 @@
     margin-bottom: 3px;
     font-size: 9.5pt;
     line-height: 1.4;
+    /* keep individual bullets atomic so a single bullet never splits mid-line */
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
-  /* Don't let the first bullet get split from the job header */
-  .job ul li:first-child { break-before: avoid; page-break-before: avoid; }
   .job li::marker { color: var(--accent); }
   strong { color: var(--navy-deep); font-weight: 600; }
 
