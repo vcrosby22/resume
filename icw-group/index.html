@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Victoria Crosby — Senior Product Manager · Data Products & AI-Driven Insights</title>
+<meta name="description" content="Senior Technical Product Manager with 10+ years delivering data products and AI-driven insights across data engineering, analytics, and platform teams — stakeholder discovery to SLA-bound pipelines, in regulated and Fortune-500 enterprise environments." />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<style>
+  /* ---------- Print-page setup ---------- */
+  @page {
+    size: Letter;
+    margin: 0;
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    font-size: 10pt;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    background: #eef0f3;
+  }
+
+  /* ---------- Page wrapper (the "paper") ---------- */
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 24px auto;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.12);
+    display: grid;
+    grid-template-columns: 2.85in 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    overflow: hidden;
+  }
+
+  /* ---------- Color scheme ---------- */
+  :root {
+    --navy: #1a3a5c;
+    --navy-deep: #0f2440;
+    --accent: #b85c38;
+    --sand: #f7f3ec;
+    --rule: #d8d3c9;
+    --muted: #5b6573;
+    --text: #1f2937;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    grid-area: header;
+    background: var(--navy);
+    color: #ffffff;
+    padding: 28px 36px 22px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  header h1 {
+    font-size: 30pt;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  header h1 .last { color: var(--accent); }
+  header .title {
+    font-size: 11.5pt;
+    margin-top: 8px;
+    color: #d9e3f0;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  header .links {
+    margin-top: 14px;
+    font-size: 9.25pt;
+    color: #c8d4e6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  header .links a { color: #c8d4e6; text-decoration: none; }
+  header .links a:hover { color: #ffffff; text-decoration: underline; }
+  header .sep { color: #5d7da3; }
+
+  /* ---------- Sidebar ---------- */
+  aside {
+    grid-area: sidebar;
+    background: var(--sand);
+    padding: 22px 22px 28px 36px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  aside h2 {
+    font-size: 10.25pt;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--navy);
+    margin: 18px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid var(--accent);
+    font-weight: 700;
+  }
+  aside h2:first-child { margin-top: 0; }
+  aside .item { margin-bottom: 4px; font-size: 9.5pt; }
+  aside .item .label { font-size: 7.75pt; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); display: block; margin-top: 6px; }
+  aside .skill-list { list-style: none; padding-left: 0; margin: 0; }
+  aside .skill-list li {
+    font-size: 9.25pt;
+    padding: 3px 0 3px 14px;
+    position: relative;
+    line-height: 1.35;
+  }
+  aside .skill-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 1px;
+  }
+  aside a { color: var(--navy); text-decoration: none; word-break: break-word; }
+  aside a:hover { text-decoration: underline; }
+  aside .cred { font-size: 9.25pt; margin: 4px 0; }
+  aside .cred .org { color: var(--muted); }
+
+  /* ---------- Main ---------- */
+  main {
+    grid-area: main;
+    padding: 24px 36px 28px 28px;
+  }
+  main h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--navy);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--navy);
+    font-weight: 700;
+  }
+  main h2:not(:first-child) { margin-top: 18px; }
+
+  .summary {
+    text-align: justify;
+    margin: 0 0 4px;
+    font-size: 9.75pt;
+  }
+
+  /* ---------- Job entries ---------- */
+  .job {
+    margin-top: 12px;
+    /* allow bullets to break across pages, but keep header stuck to first bullet */
+    orphans: 3;
+    widows: 3;
+  }
+  .job:first-of-type { margin-top: 6px; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 1px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .job-title {
+    font-size: 10.25pt;
+    font-weight: 700;
+    color: var(--navy-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .job-dates {
+    font-size: 9pt;
+    color: var(--muted);
+    white-space: nowrap;
+    font-style: italic;
+  }
+  .job-org {
+    font-size: 9.5pt;
+    color: var(--accent);
+    margin-bottom: 3px;
+    font-weight: 600;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .job-org .org-link { color: var(--accent); text-decoration: none; }
+  .job-org .org-link:hover { text-decoration: underline; }
+  .job-org .sep { color: var(--muted); margin: 0 6px; font-weight: 400; }
+  .job-type {
+    font-size: 8.75pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: -1px 0 3px;
+  }
+  .job ul { margin: 4px 0 0; padding-left: 16px; }
+  .job li {
+    margin-bottom: 3px;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  /* Don't let the first bullet get split from the job header */
+  .job ul li:first-child { break-before: avoid; page-break-before: avoid; }
+  .job li::marker { color: var(--accent); }
+  strong { color: var(--navy-deep); font-weight: 600; }
+
+  /* ---------- Selected Products ---------- */
+  .products {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--sand);
+    border-left: 3px solid var(--accent);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+  }
+  .products h3 {
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--navy);
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .products h3.second { margin-top: 10px; }
+  .products ul { margin: 0; padding-left: 16px; }
+  .products li { font-size: 9.25pt; margin-bottom: 2px; }
+  .products .org-link { color: var(--accent); text-decoration: none; }
+  .products .org-link:hover { text-decoration: underline; }
+
+  /* ---------- Data Product Lifecycle ---------- */
+  .lifecycle .lifecycle-intro {
+    font-size: 9pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .lifecycle-steps {
+    list-style: none;
+    counter-reset: lc;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px 14px;
+  }
+  .lifecycle-steps li {
+    font-size: 9pt;
+    line-height: 1.38;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .lifecycle-steps .step-num {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .lifecycle-steps .step-label { flex: 1; }
+  .lifecycle-steps strong { color: var(--navy-deep); }
+
+  /* ---------- Download PDF button (screen only) ---------- */
+  .download-bar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+  .download-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .download-btn:hover {
+    background: var(--navy-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.22);
+  }
+  .download-btn::before {
+    content: "↓ ";
+    margin-right: 4px;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #ffffff; font-size: 9.25pt; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 100%;
+      min-height: auto;
+      grid-template-columns: 2.6in 1fr;
+    }
+    .download-bar { display: none !important; }
+
+    /* tighter header */
+    header { padding: 18px 30px 14px; }
+    header h1 { font-size: 24pt; }
+    header .title { font-size: 10.5pt; margin-top: 5px; }
+    header .links { margin-top: 10px; font-size: 8.5pt; gap: 4px 14px; }
+
+    /* tighter sidebar */
+    aside { padding: 16px 18px 22px 30px; }
+    aside h2 { font-size: 9.25pt; margin: 14px 0 6px; }
+    aside h2:first-child { margin-top: 0; }
+    aside .skill-list li { padding: 2px 0 2px 12px; font-size: 8.75pt; line-height: 1.38; }
+    aside .skill-list li::before { top: 7px; width: 4px; height: 4px; }
+    aside .cred { font-size: 8.75pt; margin: 4px 0; line-height: 1.38; }
+
+    /* tighter main */
+    main { padding: 20px 28px 24px 22px; }
+    main h2 { font-size: 10pt; margin: 18px 0 8px; }
+    main h2:first-child { margin-top: 0; }
+    .summary { font-size: 9.25pt; line-height: 1.45; }
+    .job { margin-top: 13px; }
+    .job-title { font-size: 9.75pt; }
+    .job-dates { font-size: 8.5pt; }
+    .job-org { font-size: 9pt; margin-bottom: 3px; }
+    .job-type { font-size: 8.25pt; margin: -1px 0 2px; }
+    .job ul { margin: 4px 0 0; padding-left: 14px; }
+    .job li { font-size: 9pt; line-height: 1.42; margin-bottom: 3px; }
+
+    /* products box */
+    .products { margin-top: 14px; padding: 12px 14px; }
+    .products h3 { font-size: 9pt; margin: 0 0 5px; }
+    .products li { font-size: 8.75pt; margin-bottom: 2px; line-height: 1.38; }
+
+    /* keep all hyperlink text the same color in print so URLs aren't distracting */
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ---------- Responsive (mobile) ---------- */
+  @media screen and (max-width: 900px) {
+    body { font-size: 11pt; }
+    .page {
+      width: auto;
+      margin: 0;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "main";
+      box-shadow: none;
+      min-height: 0;
+    }
+    aside { padding: 22px 22px 22px 22px; }
+    main { padding: 22px; }
+    header { padding: 24px 22px; }
+    header h1 { font-size: 26pt; }
+    .download-bar { top: 8px; right: 8px; }
+    .download-btn { padding: 8px 14px; font-size: 9.5pt; }
+
+    /* lifecycle: 1-col on mobile */
+    .lifecycle-steps { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="download-bar">
+  <button class="download-btn" type="button" onclick="window.print()">Download PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- ============================================================ -->
+  <header>
+    <h1>Victoria <span class="last">Crosby</span></h1>
+    <div class="title">Senior Product Manager · Data Products &amp; AI-Driven Insights</div>
+    <div class="links">
+      <span>San Diego, CA · open to CST hours</span><span class="sep">·</span>
+      <span>917-596-7343</span><span class="sep">·</span>
+      <a href="mailto:victoria.crosby@icloud.com">victoria.crosby@icloud.com</a><span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/victoriacrosby/">linkedin.com/in/victoriacrosby</a><span class="sep">·</span>
+      <a href="https://github.com/vcrosby22">github.com/vcrosby22</a><span class="sep">·</span>
+      <a href="https://vcrosby22.github.io/ai-assisted-work/">vcrosby22.github.io/ai-assisted-work</a>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <aside>
+
+    <h2>Core Strengths</h2>
+    <ul class="skill-list">
+      <li>Data product ownership end-to-end (discovery → metrics → SLA-bound pipelines)</li>
+      <li>Stakeholder discovery with vertical analytic teams; metrics keyed to business objectives</li>
+      <li>AI-driven insights for end-user decisioning</li>
+      <li>Event/trigger spec, ingestion (incl. third-party), SQL transformations, modeled tables</li>
+      <li>Cross-functional Scrum leadership across data engineering, analytics, and platform teams</li>
+      <li>Regulated &amp; Fortune-500 enterprise governance (SaMD, ITIL)</li>
+      <li>PRDs, roadmaps, MVP scoping, MoSCoW &amp; Value-vs-Effort</li>
+      <li>Vendor / SOW negotiation (Microsoft, Avanade)</li>
+      <li>Mentoring teammates; supervisory experience</li>
+      <li>Executive &amp; stakeholder communications</li>
+    </ul>
+
+    <h2>Data Stack</h2>
+    <ul class="skill-list">
+      <li>SQL (intermediate); data modeling; pipeline &amp; SLA design</li>
+      <li>Cloud data warehouses (BigQuery / Databricks / Redshift) — patterns transferable to <strong>Snowflake</strong></li>
+      <li>Event triggers, third-party data ingestion, transformation logic</li>
+      <li>Cloud: Azure (incl. Azure OpenAI), AWS, GCP (working)</li>
+      <li>RAG pipelines, embeddings, agentic workflows</li>
+      <li>Jira, Smartsheet, Confluence, Figma</li>
+      <li>Cursor, Claude, ChatGPT, Copilot; Python (working), GitHub Actions</li>
+    </ul>
+
+    <h2>Methodologies</h2>
+    <ul class="skill-list">
+      <li>Agile / Scrum (Certified Scrum Master)</li>
+      <li>CRISP-DM (data lifecycle)</li>
+      <li>Lean Six Sigma (Green Belt)</li>
+      <li>ITIL release governance</li>
+      <li><em>Pursuing CSPO/PSPO</em></li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="cred">
+      <strong>B.A., Comparative Literature</strong>
+      <div class="org">Smith College · Northampton, MA</div>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="cred">Certified Scrum Master <span class="org">— Scrum.org</span></div>
+    <div class="cred">AI Product / Project Management <span class="org">— Duke University</span></div>
+    <div class="cred">Green Belt, Lean Six Sigma <span class="org">— Dexcom</span></div>
+    <div class="cred">Crash Course on Python <span class="org">— Google</span></div>
+
+    <h2>Selected Data Products</h2>
+    <ul class="skill-list">
+      <li><strong>Intuit Global Context Engine</strong> — context surface for AI-generated solutions, 10 verticals / 40+ stakeholders</li>
+      <li><strong>Intuit Agentic Planning Skill</strong> — 27-doc KB, 5-tier trigger detection, 9 production templates</li>
+      <li><strong>Sony AITRIOS</strong> — Azure OpenAI + real-time CV pipelines for Chipotle, Loblaw, 7-Eleven</li>
+      <li><strong>Dexcom CGM data ecosystem</strong> — Clarity / Qualtrics / Google Fit, SDK / RESTful APIs, 1M+ MAU</li>
+      <li><strong>ServiceNow KARSM</strong> + 25 maintenance releases — Fortune-500 SaaS</li>
+    </ul>
+
+    <h2>Builder Projects</h2>
+    <div class="cred">
+      Self
+      <div class="org">San Diego, CA · Feb 2026 – Present</div>
+    </div>
+    <ul class="skill-list">
+      <li><strong>AI Financial Market Analysis Agent</strong> — Python, Claude, yfinance, FRED; daily report pipeline with data-drift validation</li>
+      <li><strong>ToolWitness</strong> — open-source AI-agent verification framework</li>
+      <li><strong>AI-Assisted Work</strong> — open Cursor &amp; AI-assisted work knowledge base</li>
+    </ul>
+
+    <h2>Affiliations</h2>
+    <div class="cred">
+      Advisory Board Member
+      <div class="org">University of San Francisco School of Management · 2024 – 2025</div>
+    </div>
+
+  </aside>
+
+  <!-- ============================================================ -->
+  <main>
+
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Senior Technical Product Manager with <strong>10+ years</strong> delivering <strong>data products and AI-driven insights</strong> across data engineering, analytics, and platform teams in regulated and Fortune-500 enterprise environments. At Intuit, owned <strong>6 concurrent data products</strong> end-to-end — partnering with vertical analytic stakeholders to translate ambiguous business goals into <strong>metrics keyed to specific objectives and user behaviors</strong>, then driving the full pipeline (event triggers → ingestion incl. third-party data → SQL transformations → modeled tables → consumption layer) to defined <strong>SLAs</strong> — contributing to <strong>$55M in incremental paid-media impact</strong>. At Sony, ran the AI delivery lifecycle (CRISP-DM, RAG, Azure OpenAI integration) with Microsoft and Avanade for Fortune 500 customers. At Dexcom, led product definition and delivery of an FDA-cleared <strong>Class II SaMD portfolio</strong> used by <strong>1M+ paying patients globally</strong>, with the data-governance discipline regulated and insurance-grade environments require. Translates ambiguous business goals into PRDs, MVPs, and shipped product; builds cross-functional trust with engineering, analytics, UX, and executive stakeholders; mentors teammates and operates with autonomy.
+    </p>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Technical Product / Program Manager — Data Products &amp; AI Acceleration</div>
+        <div class="job-dates">Oct 2024 – Apr 2026</div>
+      </div>
+      <div class="job-org">Intuit <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Contract</div>
+      <ul>
+        <li>Owned <strong>6 concurrent data products</strong> across data engineering, analytics, and platform teams — defined to track <strong>new and existing product surfaces</strong>, keyed to specific <strong>business objectives and user behaviors</strong> — contributing to <strong>$55M in incremental paid-media impact</strong>.</li>
+        <li>Ran the full <strong>data-product discovery loop with vertical analytic stakeholders</strong>: aligned on business goals and the questions they needed answered, defined the metrics worth tracking, then translated each metric into an executable spec — events / triggers, source systems, third-party data needs, transformation logic, and freshness / SLA targets.</li>
+        <li>Drove delivery across the full pipeline — <strong>event triggers → ingestion (incl. third-party data) → SQL transformations → modeled tables → consumption layer</strong> — holding pipelines to defined <strong>SLAs</strong> and partnering with data engineering on backfills, schema changes, and quality gates.</li>
+        <li>Architected and shipped an <strong>agentic AI planning capability</strong> (27-doc knowledge base across 8 PM methodologies, 6-mode planning skill, 5-tier trigger detection, 9 production templates) that productized the discovery-to-spec workflow above for org-wide reuse.</li>
+        <li>Led the Consumer Group Data Science <em>Mobilization to Builder Culture</em> initiative; drove creation of a <strong>Global Context Engine</strong> that accelerates AI-generated solutions across <strong>10 vertical leads / 40+ stakeholders</strong>.</li>
+        <li>Day-to-day execution: groomed <strong>Jira</strong> backlogs across data engineering &amp; analytics squads, authored user stories &amp; acceptance criteria for pipeline work, maintained <strong>WBS in Smartsheet</strong>, and built executive dashboards tracking <strong>SLA adherence, KPI movement, and program risk</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Program Manager — AI &amp; Data Pipelines</div>
+        <div class="job-dates">Jan 2024 – Oct 2024</div>
+      </div>
+      <div class="job-org">Sony <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Contract</div>
+      <ul>
+        <li>Led end-to-end delivery of Sony's <strong>AITRIOS edge-AI sensing platform</strong> — turning real-time edge data into <strong>actionable, AI-driven insights</strong> for Fortune-500 customers including <strong>Chipotle, Loblaw Companies Ltd, 7-Eleven</strong>, and Industry 4.0 manufacturers.</li>
+        <li>Drove the full data + AI lifecycle: <strong>data collection → feature engineering → model integration / fine-tuning → RAG pipelines &amp; embeddings → API delivery</strong> — through to integrated proof-of-concept prototypes deployed in compressed delivery windows.</li>
+        <li>Negotiated and managed delivery contracts / SOWs with <strong>Microsoft</strong> (Azure OpenAI / LLM integration) and <strong>Avanade</strong> (co-developed demo build-out); integrated <strong>Azure OpenAI with real-time computer-vision data pipelines</strong> across retail, supply chain, logistics, and Industry 4.0 verticals.</li>
+        <li>Improved AI delivery throughput by <strong>~25%</strong> through <strong>CRISP-DM</strong>-based execution frameworks and tighter linkage between data readiness, platform milestones, and strategic objectives.</li>
+        <li>Day-to-day hands-on execution: ran daily standups, authored Jira user stories &amp; acceptance criteria, scoped MVPs per customer demo, maintained <strong>WBS in Smartsheet</strong>, and built dashboards tracking <strong>data-pipeline readiness, partner deliverables, and customer-evaluation milestones</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Technical Product Manager — Energy Data Systems</div>
+        <div class="job-dates">Jul 2023 – Jan 2024</div>
+      </div>
+      <div class="job-org">CPower <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Consulting</div>
+      <ul>
+        <li>Assessed data-collection systems, tools, and processes across the energy sector; identified gaps in <strong>ingestion, transformation, and reporting pipelines</strong> and delivered strategic recommendations that enabled scalable growth and operational efficiency.</li>
+        <li>Translated ambiguous data and tooling needs into <strong>actionable system recommendations and process improvements</strong> for a regulated, multi-stakeholder operating environment.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Technical Product Manager — Mobile, Wearable, Cloud &amp; Data Ecosystem (SaMD)</div>
+        <div class="job-dates">Feb 2018 – Jun 2023</div>
+      </div>
+      <div class="job-org"><a href="https://www.dexcom.com" class="org-link">Dexcom</a> <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Directed end-to-end product definition and delivery of Dexcom's <strong>FDA-cleared Class II Software as a Medical Device (SaMD)</strong> portfolio — CGM mobile apps (iOS / Android), wearable platforms (Apple Watch, Wear OS), cloud services, sensor firmware, and <strong>SDK / RESTful API data ecosystem</strong> serving <strong>~1M paying patients globally (MAU)</strong>.</li>
+        <li>Operated under <strong>IEC 62304</strong>, FDA 510(k), and design-controls / risk-management governance — discipline directly transferable to insurance-grade change control and regulated data products. Drove cross-functional alignment across Regulatory, Quality, Engineering, Clinical, UX, Marketing, Commercial, and Customer Support for every release.</li>
+        <li>Led full-lifecycle launch of the <strong>G6 and G7 CGM consumer products</strong> through FDA 510(k) clearance and post-market support — flagship offerings during Dexcom's growth to a <strong>$45B market valuation</strong>.</li>
+        <li>Shipped the <strong>data-integration ecosystem</strong> connecting Dexcom CGM with <strong>Clarity, Qualtrics, and Google Fit</strong>; authored API contracts and partnered with engineering on data exchange, freshness, and quality. Self-servicing capabilities cut tech-support call volume from paying customers by <strong>~9%</strong>.</li>
+        <li>Developed and presented a full-stack <strong>SaaS / data-platform vision</strong> leveraging Dexcom's proprietary CGM dataset and <strong>AI / ML image recognition</strong> (annotation / labeling) for unmet consumer needs — concept advanced into the product pipeline.</li>
+        <li>Stood up <strong>Voice of Customer</strong> feedback loops — analogous to vertical analytic-stakeholder discovery — that improved end-customer <strong>CSAT ~15%</strong>; authored PRDs, roadmaps, and software requirements (incl. IEC 62304 considerations); prioritized backlog using MoSCoW &amp; Value-vs-Effort.</li>
+        <li>Led executive-sponsored <strong>Lean Six Sigma</strong> transformation initiatives — <strong>~$700K annual cost savings</strong> and <strong>~$1M cost avoidance</strong> while improving release quality.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Program Manager — Enterprise SaaS Release Governance</div>
+        <div class="job-dates">Jan 2017 – Feb 2018</div>
+      </div>
+      <div class="job-org"><a href="https://www.servicenow.com/products/it-operations-management/service-mapping.html" class="org-link">ServiceNow</a> <span class="sep">·</span> IT Operations Management / Service Mapping <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Anchored operational delivery of <strong>25+ in-market maintenance and family releases</strong> shipped directly to Fortune-500 enterprise customers — coordinating <strong>60+ cross-functional teams across four countries</strong> in an <strong>ITIL-based release-governance</strong> environment, the closest enterprise analog to insurance-grade change control.</li>
+        <li>Led the customer-facing <strong>Kingston Advance Release for Service Mapping (KARSM)</strong> end-to-end — Executive, Architecture, DERT, and Security reviews through production deployment — delivering in three months and <strong>protecting high-ACV revenue from Fortune-500 customers (Microsoft, Qualcomm, and others) by preventing de-booking</strong>.</li>
+        <li>Day-to-day release management: managed Jira backlogs / user stories across 60+ teams in four countries; maintained release <strong>WBS in Smartsheet</strong>; built dashboards tracking release health, defect burndown, ITIL governance gates, and cross-country dependencies.</li>
+        <li>Streamlined SDLC processes and reduced technical debt across ITSM / ITOM verticals; delivered concise <strong>data-driven status, KPIs, and customer-impact insights</strong> to GMs and VPs.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Technical Project Manager</div>
+        <div class="job-dates">Jan 2013 – Dec 2016</div>
+      </div>
+      <div class="job-org"><a href="https://www.umusicpub.com" class="org-link">Universal Music Publishing Group</a> <span class="sep">·</span> Los Angeles &amp; San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Launched UMPG's <strong>external customer-facing global digital recording library</strong> for music supervisors, agencies, and studios — integrating <strong>MP3 metadata, Nielsen API chart data, Solr search</strong>, and database upgrades; produced <strong>sales / marketing dashboards</strong> giving leadership metrics-based visibility into the customer pipeline and <strong>increasing sync-licensing revenue</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="products lifecycle">
+      <h3>How I Build a Data Product</h3>
+      <p class="lifecycle-intro">A repeatable workflow I ran for Intuit's 6 concurrent data products — adapted from the same discipline I applied to FDA-regulated SaMD releases at Dexcom and ITIL-governed enterprise releases at ServiceNow.</p>
+      <ol class="lifecycle-steps">
+        <li><span class="step-num">1</span><span class="step-label"><strong>Discover</strong> — meet with vertical analytic stakeholders; align on business goals &amp; questions to answer.</span></li>
+        <li><span class="step-num">2</span><span class="step-label"><strong>Define metrics</strong> — keyed to specific business objectives and product-user behaviors.</span></li>
+        <li><span class="step-num">3</span><span class="step-label"><strong>Spec triggers</strong> — events, source systems, third-party data needs.</span></li>
+        <li><span class="step-num">4</span><span class="step-label"><strong>Ingest</strong> — pipelines for first-party + third-party data, with quality gates.</span></li>
+        <li><span class="step-num">5</span><span class="step-label"><strong>Transform</strong> — SQL transformations to modeled tables / marts.</span></li>
+        <li><span class="step-num">6</span><span class="step-label"><strong>Deliver</strong> — consumption layer for dashboards, AI-driven insights, end-user decisioning.</span></li>
+        <li><span class="step-num">7</span><span class="step-label"><strong>Operate</strong> — hold pipelines to defined <strong>SLAs</strong>; partner on backfills, schema changes, and incident response.</span></li>
+      </ol>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
