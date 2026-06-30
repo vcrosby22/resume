@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Victoria Crosby — Technical Program Manager · Change Management &amp; Technical Delivery</title>
+<meta name="description" content="Technical Program Manager with 13+ years leading cross-functional change management and technical delivery across AI, data platforms, enterprise SaaS, and regulated medical devices — partnering with Engineering, Cloud, Data Engineering, and Data Science teams." />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="alternate icon" type="image/png" href="../favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<style>
+  /* ---------- Print-page setup ---------- */
+  @page {
+    size: Letter;
+    margin: 0;
+  }
+
+  /* ---------- Base ---------- */
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    font-size: 10pt;
+    line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+    background: #eef0f3;
+  }
+
+  /* ---------- Page wrapper (the "paper") ---------- */
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 24px auto;
+    background: #ffffff;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.12);
+    display: grid;
+    grid-template-columns: 2.85in 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header header"
+      "sidebar main";
+    overflow: hidden;
+  }
+
+  /* ---------- Color scheme ---------- */
+  :root {
+    --navy: #1a3a5c;
+    --navy-deep: #0f2440;
+    --accent: #b85c38;
+    --sand: #f7f3ec;
+    --rule: #d8d3c9;
+    --muted: #5b6573;
+    --text: #1f2937;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    grid-area: header;
+    background: var(--navy);
+    color: #ffffff;
+    padding: 28px 36px 22px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  header h1 {
+    font-size: 30pt;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  header h1 .last { color: var(--accent); }
+  header .title {
+    font-size: 11.5pt;
+    margin-top: 8px;
+    color: #d9e3f0;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  header .links {
+    margin-top: 14px;
+    font-size: 9.25pt;
+    color: #c8d4e6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+  }
+  header .links a { color: #c8d4e6; text-decoration: none; }
+  header .links a:hover { color: #ffffff; text-decoration: underline; }
+  header .sep { color: #5d7da3; }
+
+  /* ---------- Sidebar ---------- */
+  aside {
+    grid-area: sidebar;
+    background: var(--sand);
+    padding: 22px 22px 28px 36px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  aside h2 {
+    font-size: 10.25pt;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--navy);
+    margin: 18px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid var(--accent);
+    font-weight: 700;
+  }
+  aside h2:first-child { margin-top: 0; }
+  aside .item { margin-bottom: 4px; font-size: 9.5pt; }
+  aside .item .label { font-size: 7.75pt; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); display: block; margin-top: 6px; }
+  aside .skill-list { list-style: none; padding-left: 0; margin: 0; }
+  aside .skill-list li {
+    font-size: 9.25pt;
+    padding: 3px 0 3px 14px;
+    position: relative;
+    line-height: 1.35;
+  }
+  aside .skill-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 1px;
+  }
+  aside a { color: var(--navy); text-decoration: none; word-break: break-word; }
+  aside a:hover { text-decoration: underline; }
+  aside .cred { font-size: 9.25pt; margin: 4px 0; }
+  aside .cred .org { color: var(--muted); }
+
+  /* ---------- Main ---------- */
+  main {
+    grid-area: main;
+    padding: 24px 36px 28px 28px;
+  }
+  main h2 {
+    font-size: 11pt;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--navy);
+    margin: 0 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--navy);
+    font-weight: 700;
+  }
+  main h2:not(:first-child) { margin-top: 18px; }
+
+  .summary {
+    text-align: justify;
+    margin: 0 0 4px;
+    font-size: 9.75pt;
+  }
+
+  /* ---------- Job entries ---------- */
+  .job {
+    margin-top: 12px;
+    /* allow bullets to break across pages, but keep header stuck to first bullet */
+    orphans: 3;
+    widows: 3;
+  }
+  .job:first-of-type { margin-top: 6px; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 1px;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .job-title {
+    font-size: 10.25pt;
+    font-weight: 700;
+    color: var(--navy-deep);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .job-dates {
+    font-size: 9pt;
+    color: var(--muted);
+    white-space: nowrap;
+    font-style: italic;
+  }
+  .job-org {
+    font-size: 9.5pt;
+    color: var(--accent);
+    margin-bottom: 3px;
+    font-weight: 600;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .job-org .org-link { color: var(--accent); text-decoration: none; }
+  .job-org .org-link:hover { text-decoration: underline; }
+  .job-org .sep { color: var(--muted); margin: 0 6px; font-weight: 400; }
+  .job-type {
+    font-size: 8.75pt;
+    color: var(--muted);
+    font-style: italic;
+    margin: -1px 0 3px;
+  }
+  .job ul { margin: 4px 0 0; padding-left: 16px; }
+  .job li {
+    margin-bottom: 3px;
+    font-size: 9.5pt;
+    line-height: 1.4;
+  }
+  /* Don't let the first bullet get split from the job header */
+  .job ul li:first-child { break-before: avoid; page-break-before: avoid; }
+  .job li::marker { color: var(--accent); }
+  strong { color: var(--navy-deep); font-weight: 600; }
+
+  /* ---------- Selected Products ---------- */
+  .products {
+    margin-top: 14px;
+    padding: 12px 14px;
+    background: var(--sand);
+    border-left: 3px solid var(--accent);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid;
+  }
+  .products h3 {
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--navy);
+    margin: 0 0 6px;
+    font-weight: 700;
+  }
+  .products h3.second { margin-top: 10px; }
+  .products ul { margin: 0; padding-left: 16px; }
+  .products li { font-size: 9.25pt; margin-bottom: 2px; }
+  .products .org-link { color: var(--accent); text-decoration: none; }
+  .products .org-link:hover { text-decoration: underline; }
+
+  /* ---------- Download PDF button (screen only) ---------- */
+  .download-bar {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+  }
+  .download-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 10pt;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.18);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+  }
+  .download-btn:hover {
+    background: var(--navy-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.22);
+  }
+  .download-btn::before {
+    content: "↓ ";
+    margin-right: 4px;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: #ffffff; font-size: 9.25pt; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: 100%;
+      min-height: auto;
+      grid-template-columns: 2.6in 1fr;
+    }
+    .download-bar { display: none !important; }
+
+    /* tighter header */
+    header { padding: 18px 30px 14px; }
+    header h1 { font-size: 24pt; }
+    header .title { font-size: 10.5pt; margin-top: 5px; }
+    header .links { margin-top: 10px; font-size: 8.5pt; gap: 4px 14px; }
+
+    /* tighter sidebar */
+    aside { padding: 16px 18px 22px 30px; }
+    aside h2 { font-size: 9.25pt; margin: 14px 0 6px; }
+    aside h2:first-child { margin-top: 0; }
+    aside .skill-list li { padding: 2px 0 2px 12px; font-size: 8.75pt; line-height: 1.38; }
+    aside .skill-list li::before { top: 7px; width: 4px; height: 4px; }
+    aside .cred { font-size: 8.75pt; margin: 4px 0; line-height: 1.38; }
+
+    /* tighter main */
+    main { padding: 20px 28px 24px 22px; }
+    main h2 { font-size: 10pt; margin: 18px 0 8px; }
+    main h2:first-child { margin-top: 0; }
+    .summary { font-size: 9.25pt; line-height: 1.45; }
+    .job { margin-top: 13px; }
+    .job-title { font-size: 9.75pt; }
+    .job-dates { font-size: 8.5pt; }
+    .job-org { font-size: 9pt; margin-bottom: 3px; }
+    .job-type { font-size: 8.25pt; margin: -1px 0 2px; }
+    .job ul { margin: 4px 0 0; padding-left: 14px; }
+    .job li { font-size: 9pt; line-height: 1.42; margin-bottom: 3px; }
+
+    /* products box */
+    .products { margin-top: 14px; padding: 12px 14px; }
+    .products h3 { font-size: 9pt; margin: 0 0 5px; }
+    .products li { font-size: 8.75pt; margin-bottom: 2px; line-height: 1.38; }
+
+    /* keep all hyperlink text the same color in print so URLs aren't distracting */
+    a { color: inherit; text-decoration: none; }
+  }
+
+  /* ---------- Responsive (mobile) ---------- */
+  @media screen and (max-width: 900px) {
+    body { font-size: 11pt; }
+    .page {
+      width: auto;
+      margin: 0;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "sidebar"
+        "main";
+      box-shadow: none;
+      min-height: 0;
+    }
+    aside { padding: 22px 22px 22px 22px; }
+    main { padding: 22px; }
+    header { padding: 24px 22px; }
+    header h1 { font-size: 26pt; }
+    .download-bar { top: 8px; right: 8px; }
+    .download-btn { padding: 8px 14px; font-size: 9.5pt; }
+  }
+</style>
+</head>
+<body>
+
+<div class="download-bar">
+  <button class="download-btn" type="button" onclick="window.print()">Download PDF</button>
+</div>
+
+<div class="page">
+
+  <!-- ============================================================ -->
+  <header>
+    <h1>Victoria <span class="last">Crosby</span></h1>
+    <div class="title">Technical Program Manager · Change Management &amp; Technical Delivery</div>
+    <div class="links">
+      <span>San Diego, CA · open to CST hours</span><span class="sep">·</span>
+      <span>917-596-7343</span><span class="sep">·</span>
+      <a href="mailto:victoria.crosby@icloud.com">victoria.crosby@icloud.com</a><span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/victoriacrosby/">linkedin.com/in/victoriacrosby</a><span class="sep">·</span>
+      <a href="https://github.com/vcrosby22">github.com/vcrosby22</a><span class="sep">·</span>
+      <a href="https://vcrosby22.github.io/ai-assisted-work/">vcrosby22.github.io/ai-assisted-work</a>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <aside>
+
+    <h2>Core Strengths</h2>
+    <ul class="skill-list">
+      <li>Change management &amp; organizational readiness</li>
+      <li>Business-readiness, adoption &amp; training programs</li>
+      <li>Cross-functional delivery with Engineering, Cloud, Data Engineering &amp; Data Science</li>
+      <li>Program governance, RAID, risk &amp; dependency management</li>
+      <li>Data pipelines &amp; analytics-platform delivery</li>
+      <li>Executive communications, dashboards &amp; status reporting</li>
+      <li>Process improvement (Lean Six Sigma Green Belt)</li>
+      <li>AI-assisted execution (Claude, Cursor) &amp; workflow automation</li>
+      <li>Stakeholder influence without direct authority</li>
+      <li>Structure &amp; execution in ambiguous, fast-changing environments</li>
+    </ul>
+
+    <h2>Technical Breadth</h2>
+    <ul class="skill-list">
+      <li>Software development &amp; SDLC</li>
+      <li>Cloud platforms &amp; infrastructure</li>
+      <li>Data pipelines / ETL (Databricks, Redshift, SQL)</li>
+      <li>Analytics &amp; BI dashboards</li>
+      <li>Mobile, wearable, SaaS &amp; APIs</li>
+    </ul>
+
+    <h2>Methodologies</h2>
+    <ul class="skill-list">
+      <li>Change &amp; release governance (ITIL)</li>
+      <li>Agile / Scrum (Certified Scrum Master)</li>
+      <li>Lean Six Sigma (Green Belt)</li>
+      <li>Hybrid Agile / Waterfall</li>
+    </ul>
+
+    <h2>Tools</h2>
+    <ul class="skill-list">
+      <li>Jira, Asana, Smartsheet, Confluence</li>
+      <li>Google Workspace, Microsoft Office</li>
+      <li>Claude, Cursor, ChatGPT, Copilot</li>
+      <li>SQL, Python (working), GitHub Actions</li>
+    </ul>
+
+    <h2>Education</h2>
+    <div class="cred">
+      <strong>B.A., Comparative Literature</strong>
+      <div class="org">Smith College · Northampton, MA</div>
+    </div>
+
+    <h2>Certifications</h2>
+    <div class="cred">Certified Scrum Master <span class="org">— Scrum.org</span></div>
+    <div class="cred">AI Product / Project Management <span class="org">— Duke University</span></div>
+    <div class="cred">Green Belt, Lean Six Sigma <span class="org">— Dexcom</span></div>
+    <div class="cred">Crash Course on Python <span class="org">— Google</span></div>
+
+    <h2>AI / Automation Projects</h2>
+    <div class="cred">
+      Self
+      <div class="org">San Diego, CA · Feb 2026 – Present</div>
+    </div>
+    <ul class="skill-list">
+      <li><strong>ToolWitness</strong> — open-source AI-agent verification framework</li>
+      <li><strong>AI Financial Market Analysis Agent</strong> — Python, Claude, yfinance, FRED</li>
+      <li><strong>AI-Assisted Work</strong> — open Cursor and AI-assisted work knowledge base</li>
+    </ul>
+
+    <h2>Affiliations</h2>
+    <div class="cred">
+      Advisory Board Member
+      <div class="org">University of San Francisco School of Management · 2024 – 2025</div>
+    </div>
+
+  </aside>
+
+  <!-- ============================================================ -->
+  <main>
+
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Technical Program Manager with <strong>13+ years</strong> leading complex, cross-functional <strong>change management and technical delivery</strong> across AI, data platforms, enterprise SaaS, and regulated medical devices. Within <strong>Intuit's Consumer Group Data Science</strong> organization, partners directly with <strong>Engineering, Cloud, Data Engineering, and Data Science</strong> teams — delivering <strong>MDAP (Marketing Data as a Product)</strong> and season-ready analytics for the <strong>ECC (Executive Command Center)</strong> dashboard, tied to <strong>$55M in incremental paid-media impact</strong>. Drove enterprise change management at <strong>ServiceNow</strong> (25+ ITIL-governed releases across 60+ teams in four countries) and safety-critical change control at <strong>Dexcom</strong> (FDA 510(k) Class II SaMD, 37 international markets). Strong working understanding of software development, cloud platforms, infrastructure, data pipelines, and analytics platforms — pairing business-readiness, adoption, and communication planning with hands-on technical delivery (Jira user stories, triage and sprint cadence, Smartsheet WBS, executive dashboards). Lean Six Sigma Green Belt; fluent with modern AI tools (<strong>Claude, Cursor</strong>) to streamline workflows and accelerate execution.
+    </p>
+
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Technical Program Manager — Data &amp; AI Acceleration</div>
+        <div class="job-dates">Oct 2024 – Apr 2026</div>
+      </div>
+      <div class="job-org">Intuit <span class="sep">·</span> Consumer Group Data Science <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Contract</div>
+      <ul>
+        <li>Led delivery of <strong>MDAP (Marketing Data as a Product)</strong> — partnering directly with <strong>Data Engineering</strong> to productize governed, reusable marketing datasets and pipelines consumed by data science and analyst teams; worked inside their <strong>Jira</strong> user-story, triage, and sprint processes to align ingestion patterns, transformation logic, and metric definitions — contributing to <strong>$55M in incremental paid-media impact</strong>.</li>
+        <li>Led large, multi-team initiatives across <strong>data science and analyst teams</strong> to deliver <strong>season-ready analytics products</strong> for the <strong>ECC (Executive Command Center)</strong> dashboard — coordinating re-platforming of legacy reporting onto modern cloud data pipelines (<strong>Databricks, Redshift</strong>) with executive-ready KPI scorecards, defined SLAs, and quality controls across 30+ stakeholders.</li>
+        <li>Embedded within a data science org as a <strong>change agent</strong>, owning the PM Foundations pillar of the <em>Mobilization to Builder Culture</em> initiative across <strong>10 vertical leads and 40+ stakeholders</strong> — standardizing delivery practices and driving adoption of new ways of working.</li>
+        <li>Established program governance and change cadence: executive operating reviews, weekly status, risk and dependency escalation, and scalable planning frameworks that improved cross-team execution speed and readiness.</li>
+        <li>Architected and shipped a reusable <strong>agentic-AI planning capability</strong> (27-document knowledge base across 8 PM methodologies, 6-mode planning skill, 5-tier trigger detection with governance gates, 9 production templates) — establishing an AI-assisted delivery foundation adopted org-wide.</li>
+        <li>Hands-on execution: groomed <strong>Jira</strong> backlogs across data engineering and analytics squads, authored user stories and acceptance criteria, maintained <strong>WBS in Smartsheet</strong>, and built executive reporting dashboards tracking milestones, dependencies, and program KPIs.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Program Manager — AI &amp; Innovation</div>
+        <div class="job-dates">Jan 2024 – Oct 2024</div>
+      </div>
+      <div class="job-org">Sony <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Contract</div>
+      <ul>
+        <li>Spearheaded end-to-end execution of Sony's <strong>AITRIOS edge-AI sensing platform</strong> in a startup-style environment, delivering data-driven, demo-ready AI solutions inside compressed delivery windows.</li>
+        <li>Partnered with <strong>Microsoft</strong> (Azure OpenAI / LLM integration) and <strong>Avanade</strong> to integrate cloud services with real-time computer-vision data pipelines for enterprise customers including <strong>Chipotle</strong>, <strong>Loblaw</strong>, and <strong>7-Eleven</strong> — aligning business objectives with phased delivery plans across retail, supply chain, and Industry 4.0.</li>
+        <li>Improved delivery throughput by <strong>~25%</strong> via structured execution frameworks (<strong>CRISP-DM</strong>); ran daily standups, authored user stories in Jira, scoped MVPs per demo, maintained <strong>WBS in Smartsheet</strong>, and produced readiness and milestone dashboards.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Technical Product Manager — Mobile, Wearable &amp; Cloud (SaMD)</div>
+        <div class="job-dates">Feb 2018 – Jun 2023</div>
+      </div>
+      <div class="job-org"><a href="https://www.dexcom.com" class="org-link">Dexcom</a> <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Directed <strong>end-to-end definition and delivery</strong> of Dexcom's <strong>FDA-cleared Class II Software as a Medical Device (SaMD) portfolio</strong> — CGM mobile apps (iOS / Android), wearable platforms (Apple Watch, Wear OS), cloud services, sensor firmware, and SDK / RESTful API ecosystem — serving <strong>~1M paying patients globally</strong>.</li>
+        <li>Drove cross-functional alignment across <strong>Regulatory Affairs, Quality, Engineering</strong> (firmware, hardware, mobile, wearable, cloud), <strong>Clinical, UX, Marketing, and Support</strong> — owning PRDs and partnering on <strong>design controls, risk management, and change control</strong> where safety and traceability were critical for every FDA-regulated release.</li>
+        <li>Led the full-lifecycle launch of the <strong>G6 and G7 CGM</strong> products through <strong>FDA 510(k) clearance</strong> and post-market support — a key factor in growth to a <strong>$45B market valuation</strong>.</li>
+        <li>Managed global software/firmware releases taking the G6 CGM app into <strong>37 international markets</strong>, supporting the corporate goal to double revenue through international expansion.</li>
+        <li>Stood up <strong>Voice of Customer (VoC)</strong> feedback loops with Marketing, UX, and Support — improving <strong>end-customer CSAT ~15%</strong> and cutting support-call volume ~9%.</li>
+        <li>Led executive-sponsored <strong>Lean Six Sigma</strong> initiatives — <strong>~$700K annual cost savings</strong> and <strong>~$1M cost avoidance</strong> while improving release quality.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Program Manager</div>
+        <div class="job-dates">Jan 2017 – Feb 2018</div>
+      </div>
+      <div class="job-org"><a href="https://www.servicenow.com/products/it-operations-management/service-mapping.html" class="org-link">ServiceNow</a> <span class="sep">·</span> IT Operations Management / Service Mapping <span class="sep">·</span> San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Anchored operational delivery of <strong>25+ in-market maintenance and family releases</strong> shipped to enterprise customers on ServiceNow's SaaS platform — coordinating <strong>60+ cross-functional teams across four countries</strong> in an <strong>ITIL-based release-governance and change-management environment</strong>.</li>
+        <li>Ran day-to-day change and release management: managed <strong>Jira</strong> backlogs and release requirements across 60+ teams, maintained release <strong>WBS in Smartsheet</strong>, and built dashboards tracking release health, defect burndown, and ITIL governance gates.</li>
+        <li>Led the customer-facing <strong>Kingston Advance Release for Service Mapping (KARSM)</strong> end-to-end — Executive, Architecture, DERT, and Security reviews through production deployment — delivering the full release in three months and <strong>protecting high-ACV revenue from Fortune 500 customers (Microsoft, Qualcomm)</strong>.</li>
+        <li>Streamlined SDLC processes and reduced technical debt across ITSM / ITOM verticals; delivered concise, data-driven status, KPIs, and customer-impact insights to GMs and VPs.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Technical Project Manager</div>
+        <div class="job-dates">Jan 2013 – Dec 2016</div>
+      </div>
+      <div class="job-org"><a href="https://www.umusicpub.com" class="org-link">Universal Music Publishing Group</a> <span class="sep">·</span> Los Angeles &amp; San Diego, CA</div>
+      <div class="job-type">Staff</div>
+      <ul>
+        <li>Delivered UMPG's 5-year growth strategy by launching an <strong>external, customer-facing global digital recording library</strong> used by music supervisors, agencies, and studios — driving cross-department collaboration to break down operational silos.</li>
+        <li>Acted as SME for <strong>approval-workflow automation and system integrations</strong>, leading process and tooling improvements that increased delivery efficiency.</li>
+        <li>Ran delivery end-to-end: authored PRDs and user stories in <strong>Jira</strong>, maintained project <strong>WBS in Smartsheet</strong>, and produced reporting dashboards giving leadership pipeline visibility.</li>
+      </ul>
+    </div>
+
+    <div class="products">
+      <h3>Selected Programs &amp; Products</h3>
+      <ul>
+        <li><strong>Intuit MDAP</strong> (Marketing Data as a Product) &amp; <strong>ECC</strong> Executive Command Center analytics — Consumer Group Data Science</li>
+        <li><strong>Dexcom G6 / G7 CGM</strong> — FDA-cleared SaMD shipped across the USA + 24 international markets</li>
+        <li><strong>ServiceNow KARSM</strong> (Kingston Advance Release for Service Mapping) + 25 in-market releases</li>
+        <li><strong>UMPG</strong> Sync Licensing &amp; Classical Music platforms — used by external music supervisors and agencies</li>
+      </ul>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>
