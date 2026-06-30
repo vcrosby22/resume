@@ -10,8 +10,14 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <style>
   /* ---------- Print-page setup ---------- */
+  /* Continuation pages (2+) get top/bottom breathing room so text isn't
+     crammed against the paper edge after a page break. Page 1 stays
+     full-bleed so the navy header and sand sidebar reach the edges. */
   @page {
     size: Letter;
+    margin: 0.45in 0;
+  }
+  @page :first {
     margin: 0;
   }
 
