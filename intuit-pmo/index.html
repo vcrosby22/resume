@@ -10,14 +10,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <style>
   /* ---------- Print-page setup ---------- */
-  /* Continuation pages (2+) get top/bottom breathing room so text isn't
-     crammed against the paper edge after a page break. Page 1 stays
-     full-bleed so the navy header and sand sidebar reach the edges. */
+  /* Full-bleed on every page so the navy header and cream sidebar reach
+     the paper edges, including the top of continuation pages. Page fill
+     is controlled by content spacing (below), not page margins. */
   @page {
     size: Letter;
-    margin: 0.45in 0;
-  }
-  @page :first {
     margin: 0;
   }
 
@@ -280,48 +277,63 @@
   }
 
   /* ---------- Print ---------- */
+  /* Spacing here is deliberately open (not condensed) so the content
+     fills all three pages evenly instead of leaving a sparse final page.
+     If content changes, re-tune these to keep it exactly three pages. */
   @media print {
-    body { background: #ffffff; font-size: 9.25pt; }
+    /* Paint the two-column cream/white onto the ROOT element so it
+       propagates to the whole page canvas of EVERY page — including the
+       blank trailing space on the last page. This makes the cream sidebar
+       bleed full height top-to-bottom regardless of where content ends. */
+    html {
+      background: linear-gradient(to right, var(--sand) 0 2.6in, #ffffff 2.6in 100%);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body { background: transparent; font-size: 10pt; }
     .page {
       margin: 0;
       box-shadow: none;
       width: 100%;
       min-height: auto;
       grid-template-columns: 2.6in 1fr;
+      background: transparent;
     }
+    aside { background: transparent; }
+    main { background: transparent; }
     .download-bar { display: none !important; }
 
-    /* tighter header */
-    header { padding: 18px 30px 14px; }
-    header h1 { font-size: 24pt; }
-    header .title { font-size: 10.5pt; margin-top: 5px; }
-    header .links { margin-top: 10px; font-size: 8.5pt; gap: 4px 14px; }
+    /* header */
+    header { padding: 24px 30px 20px; }
+    header h1 { font-size: 25pt; }
+    header .title { font-size: 11pt; margin-top: 7px; }
+    header .links { margin-top: 12px; font-size: 9pt; gap: 6px 16px; }
 
-    /* tighter sidebar */
-    aside { padding: 16px 18px 22px 30px; }
-    aside h2 { font-size: 9.25pt; margin: 14px 0 6px; }
+    /* sidebar */
+    aside { padding: 22px 20px 28px 30px; }
+    aside h2 { font-size: 9.75pt; margin: 20px 0 9px; }
     aside h2:first-child { margin-top: 0; }
-    aside .skill-list li { padding: 2px 0 2px 12px; font-size: 8.75pt; line-height: 1.38; }
-    aside .skill-list li::before { top: 7px; width: 4px; height: 4px; }
-    aside .cred { font-size: 8.75pt; margin: 4px 0; line-height: 1.38; }
+    aside .skill-list li { padding: 4px 0 4px 13px; font-size: 9.25pt; line-height: 1.5; }
+    aside .skill-list li::before { top: 9px; width: 5px; height: 5px; }
+    aside .cred { font-size: 9.25pt; margin: 7px 0; line-height: 1.5; }
 
-    /* tighter main */
-    main { padding: 20px 28px 24px 22px; }
-    main h2 { font-size: 10pt; margin: 18px 0 8px; }
+    /* main */
+    main { padding: 26px 30px 28px 24px; }
+    main h2 { font-size: 10.5pt; margin: 24px 0 11px; }
     main h2:first-child { margin-top: 0; }
-    .summary { font-size: 9.25pt; line-height: 1.45; }
-    .job { margin-top: 13px; }
-    .job-title { font-size: 9.75pt; }
-    .job-dates { font-size: 8.5pt; }
-    .job-org { font-size: 9pt; margin-bottom: 3px; }
-    .job-type { font-size: 8.25pt; margin: -1px 0 2px; }
-    .job ul { margin: 4px 0 0; padding-left: 14px; }
-    .job li { font-size: 9pt; line-height: 1.42; margin-bottom: 3px; }
+    .summary { font-size: 9.75pt; line-height: 1.75; }
+    .job { margin-top: 23px; }
+    .job-title { font-size: 10pt; }
+    .job-dates { font-size: 9pt; }
+    .job-org { font-size: 9.5pt; margin-bottom: 5px; }
+    .job-type { font-size: 8.75pt; margin: 0 0 4px; }
+    .job ul { margin: 7px 0 0; padding-left: 15px; }
+    .job li { font-size: 9.5pt; line-height: 1.6; margin-bottom: 8px; }
 
     /* products box */
-    .products { margin-top: 14px; padding: 12px 14px; }
-    .products h3 { font-size: 9pt; margin: 0 0 5px; }
-    .products li { font-size: 8.75pt; margin-bottom: 2px; line-height: 1.38; }
+    .products { margin-top: 26px; padding: 16px 16px; }
+    .products h3 { font-size: 9.5pt; margin: 0 0 8px; }
+    .products li { font-size: 9.25pt; margin-bottom: 7px; line-height: 1.55; }
 
     /* keep all hyperlink text the same color in print so URLs aren't distracting */
     a { color: inherit; text-decoration: none; }
@@ -414,12 +426,6 @@
       <li>SQL, Python (working), GitHub Actions</li>
     </ul>
 
-    <h2>Education</h2>
-    <div class="cred">
-      <strong>B.A., Comparative Literature</strong>
-      <div class="org">Smith College · Northampton, MA</div>
-    </div>
-
     <h2>Certifications</h2>
     <div class="cred">Certified Scrum Master <span class="org">— Scrum.org</span></div>
     <div class="cred">AI Product / Project Management <span class="org">— Duke University</span></div>
@@ -436,6 +442,12 @@
       <li><a href="https://vcrosby22.github.io/financial-reports/"><strong>AI Financial Market Analysis Agent</strong></a> — Python, Claude, yfinance, FRED</li>
       <li><a href="https://vcrosby22.github.io/ai-assisted-work/"><strong>AI-Assisted Work</strong></a> — open Cursor and AI-assisted work knowledge base</li>
     </ul>
+
+    <h2>Education</h2>
+    <div class="cred">
+      <strong>B.A., Comparative Literature</strong>
+      <div class="org">Smith College · Northampton, MA</div>
+    </div>
 
     <h2>Affiliations</h2>
     <div class="cred">
